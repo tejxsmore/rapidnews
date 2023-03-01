@@ -1,0 +1,14 @@
+import Link from "next/link";
+
+export default function Article({ date, title, content, url, img }) {
+  return (
+    <div>
+      <h1>
+        {date} - {title}
+      </h1>
+      <img src={img} alt="Image" style={{ height: 200 }} />
+      <p>{content}</p>
+      <Link href={url}>Read more</Link>
+    </div>
+  );
+}
