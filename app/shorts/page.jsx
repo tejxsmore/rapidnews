@@ -6,13 +6,11 @@ export default async function Home() {
     if (!res.ok) {
       throw new Error(`Data fetch unsuccessfull`);
     }
-    const data = await res.json();
+    const { data } = await res.json();
 
-    const news = data.data;
     return (
       <div>
-        <h1>Welcome to Rapid NEWS</h1>
-        {news.map((article) => (
+        {data.map((article) => (
           <Article
             key={article.id}
             date={article.date}

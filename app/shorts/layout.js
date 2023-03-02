@@ -1,3 +1,5 @@
+import Navbar from "./Navbar";
+
 export const metadata = {
   title: "Shorts",
   description: "Get News in just 60 lines",
@@ -6,7 +8,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
