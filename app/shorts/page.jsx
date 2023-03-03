@@ -1,3 +1,4 @@
+import Navbar from "../Navbar";
 import Article from "./Article";
 
 export default async function Home() {
@@ -10,6 +11,7 @@ export default async function Home() {
 
     return (
       <div>
+        <Navbar />
         {data.map((article) => (
           <Article
             key={article.id}
