@@ -3,7 +3,7 @@ import Label from "./Label";
 export default async function Navbar() {
   return (
     <div>
-      <div className="flex justify-between m-2 h-14">
+      <div className="flex justify-between m-2 h-14 border-b-2 border-dotted border-black">
         <div className="text-4xl m-1">
           <h1>RAPID NEWS</h1>
         </div>
@@ -22,9 +22,6 @@ export default async function Navbar() {
           </div>
           <div className="mx-4 pt-3 hover:underline">
             <a href="/politics">Politics</a>
-          </div>
-          <div className="mx-4 pt-3 hover:underline">
-            <a href="/Shorts">Shorts</a>
           </div>
           <div className="mx-4 pt-3 hover:underline">
             <a href="/weather">Weather</a>
