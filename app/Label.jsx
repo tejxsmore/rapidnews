@@ -14,6 +14,7 @@ export default function Label() {
       {categories.map((e) => (
         <button
           key={e.id}
+          id={e.id}
           onClick={manageClick}
           className="mx-1 px-3 py-1 border-2 border-black rounded-full cursor-pointer"
         >
