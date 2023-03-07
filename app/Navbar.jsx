@@ -15,9 +15,6 @@ export default async function Navbar() {
             <a href="/india">India</a>
           </div>
           <div className="mx-4 pt-3 hover:underline">
-            <a href="/sports">Ukraine</a>
-          </div>
-          <div className="mx-4 pt-3 hover:underline">
             <a href="/science">Corona</a>
           </div>
           <div className="mx-4 pt-3 hover:underline">

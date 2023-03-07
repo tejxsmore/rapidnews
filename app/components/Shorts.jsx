@@ -1,8 +1,10 @@
 import Latest from "./Latest";
 
-export default async function Home() {
+export default async function Home({ category = "sports" }) {
   try {
-    const res = await fetch(`https://inshorts.deta.dev/news?category=sports`);
+    const res = await fetch(
+      `https://inshorts.deta.dev/news?category=${category}`
+    );
     if (!res.ok) {
       throw new Error(`Data fetch unsuccessfull`);
     }

@@ -1,3 +1,7 @@
-export default function Weather() {
-  return <div>This is weather page</div>;
+export default async function Weather() {
+  return (
+    <div>
+      <h1>Weather forecast</h1>
+    </div>
+  );
 }

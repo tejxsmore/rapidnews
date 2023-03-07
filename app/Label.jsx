@@ -1,5 +1,6 @@
 "use client";
 import { categories } from "@/public/categories";
+import Shorts from "./components/Shorts";
 
 export default function Label() {
   const date = new Date().toDateString();
@@ -12,7 +13,8 @@ export default function Label() {
           key={e.id}
           id={e.id}
           onClick={() => {
-            console.log(e.topic);
+            <Shorts category={`${e.topic}`} />;
+            return console.log(e.topic);
           }}
           className="mx-1 px-3 py-1 border-2 border-black rounded-full cursor-pointer"
         >
