@@ -1,7 +1,7 @@
 import "./globals.css";
-import { Gloock } from "next/font/google";
+import { Urbanist } from "next/font/google";
 
-const gloock = Gloock({
+const urbanist = Urbanist({
   weight: "400",
   subsets: ["latin"],
   display: "swap",
@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={gloock.className}>
+    <html lang="en" className={urbanist.className}>
       <body>{children}</body>
     </html>
   );

@@ -1,32 +1,25 @@
-// import Link from "next/link";
+import ArticleCard from "./Card/ArticleCard";
 
-// export default function Article({ date, title, content, url, img }) {
-//   return (
-//     <div className="flex justify-center items-center ">
-//       <div className="items-center my-4 bg-gray-200 rounded-xl p-2">
-//         <h6 className="max-w-lg py-1">{date}</h6>
-//         <h1 className="max-w-lg py-1 ">{title}</h1>
-//         <img src={img} alt="Image" style={{ width: 512 }} />
-//         <h6 className="max-w-lg py-1">{content}</h6>
-//         <Link className="py-1" href={url}>
-//           Read more ➡️
-//         </Link>
-//       </div>
-//     </div>
-//   );
-// }
-
-import Link from "next/link";
-
-export default function Article({ title, content, url, img }) {
+export default async function Article() {
+  const res = await fetch(
+    `https://newsapi.org/v2/everything?q=india&apiKey=d829471bf6a544f484c80a39eef483d5`
+  );
+  const { articles } = await res.json();
   return (
-    <div className="p-3">
-      <h1 className="max-w-lg py-1 ">{title}</h1>
-      <img src={img} alt="Image" style={{ width: 500 }} />
-      <h6 className="max-w-lg py-1">{content}</h6>
-      <Link className="py-1" href={url}>
-        Read more ➡️
-      </Link>
-    </div>
+    <>
+      {articles.map((article) =>
+        article.urlToImage ? (
+          <ArticleCard
+            key={article.publishedAt}
+            title={article.title}
+            content={article.description}
+            img={article.urlToImage}
+            url={article.url}
+          />
+        ) : (
+          <div></div>
+        )
+      )}
+    </>
   );
 }

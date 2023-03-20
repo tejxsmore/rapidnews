@@ -4,25 +4,24 @@
 
 html,
 body {
-  height: 100%;
-  overflow: hidden;
-  margin: 0;
+  color: #1a120b;
+  background-color: #faf8f1;
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 0px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px white;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: grey;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 /* Handle on hover */

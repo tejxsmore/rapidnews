@@ -1,4 +1,4 @@
-import Latest from "./Latest";
+import ShortsCard from "./Card/ShortsCard";
 
 export default async function Home({ category = "sports" }) {
   try {
@@ -12,10 +12,9 @@ export default async function Home({ category = "sports" }) {
 
     return (
       <div>
-        <p className="p-3 text-xl">Latest</p>
         {data.map((article) =>
           article.readMoreUrl ? (
-            <Latest
+            <ShortsCard
               key={article.id}
               title={article.title}
               content={article.content}
