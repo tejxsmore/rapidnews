@@ -1,7 +1,7 @@
 export default async function Navbar() {
   return (
     <div>
-      <div className="flex justify-between p-2 bg-dark">
+      <div className="flex justify-between p-2 bg-dark w-full">
         <div className="text-4xl text-light">
           <a href="/">NEWS</a>
         </div>
