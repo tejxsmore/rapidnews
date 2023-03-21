@@ -2,9 +2,8 @@ import ShortsCard from "./Card/ShortsCard";
 
 export default async function Home() {
   try {
-    const res = await fetch(
-      `https://inshorts.me/news/trending?offset=0&limit=10`
-    );
+    // const res = await fetch(`https://inshorts.me/news/all?offset=0&limit=10`);
+    const res = await fetch(`https://inshorts.deta.dev/news?category=science`);
     if (!res.ok) {
       throw new Error(`Data fetch unsuccessfull`);
     }
@@ -12,13 +11,13 @@ export default async function Home() {
 
     return (
       <div>
-        {data.articles.map((article) =>
-          article.sourceUrl ? (
+        {data.map((article) =>
+          article.readMoreUrl ? (
             <ShortsCard
-              key={article.hashId}
+              key={article.id}
               title={article.title}
               content={article.content}
-              url={article.sourceUrl}
+              url={article.readMoreUrl}
               img={article.imageUrl}
             />
           ) : (
