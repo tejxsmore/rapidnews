@@ -12,8 +12,7 @@ module.exports = {
     colors: {
       dark: "#2B3467",
       light: "#FFFBF5",
-      pink: "#E798AE",
-      sky: "#BAD7E9",
+      red: "#D2001A",
     },
     extend: {},
   },

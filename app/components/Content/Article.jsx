@@ -1,4 +1,4 @@
-import ArticleCard from "./Card/ArticleCard";
+import ArticleCard from "../Card/ArticleCard";
 
 export default async function Article() {
   const res = await fetch(

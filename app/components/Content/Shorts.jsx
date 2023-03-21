@@ -1,4 +1,4 @@
-import ShortsCard from "./Card/ShortsCard";
+import ShortsCard from "../Card/ShortsCard";
 
 export default async function Home() {
   try {
