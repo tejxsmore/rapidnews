@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function MostRead({ title, content, url }) {
+export default function MostRead({ title, content, url, img }) {
   return (
     <div className="p-3">
       <h1 className="text-lg">{title}</h1>
@@ -11,4 +11,3 @@ export default function MostRead({ title, content, url }) {
     </div>
   );
 }
-``;
