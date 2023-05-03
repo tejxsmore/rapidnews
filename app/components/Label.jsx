@@ -6,7 +6,7 @@ export default function Label() {
     <div className="flex justify-between bg-dark text-light w-full overflow-x-auto">
       {categories.map((category) => (
         <div className="my-1 mx-2">
-          <Link key={category.id} href={category.topic}>
+          <Link key={category.id} href={category.url}>
             {category.topic}
           </Link>
         </div>
