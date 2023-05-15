@@ -19,13 +19,6 @@ export default function Footer() {
         >
           <img src="img/linkedin.png" alt="LinkedIn" />
         </Link>
-        <Link
-          href="https://instagram.com/tejxsmore"
-          target="_blank"
-          className="w-5 mx-2 pt-0.5"
-        >
-          <img src="img/instagram.png" alt="Instagram" />
-        </Link>
       </div>
       <div>
         <h1>© {year}</h1>
