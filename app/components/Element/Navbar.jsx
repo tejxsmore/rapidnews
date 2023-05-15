@@ -9,7 +9,7 @@ export default async function Navbar() {
 
   return (
     <div>
-      <div className="flex justify-between p-2 bg-dark w-full border-b-2 border-light">
+      <div className="flex justify-between p-3 bg-dark w-full border-b-2 border-light">
         <div className="text-4xl text-light">
           <a href="/">NEWS</a>
         </div>
@@ -21,18 +21,18 @@ export default async function Navbar() {
         <div>
           <button
             className="text-light bg-red px-5 py-2 
-          text-center rounded-md hover:bg-light hover:text-dark"
+          text-center rounded-lg hover:bg-light hover:text-dark"
           >
             Subscribe
           </button>
         </div>
       </div>
-      <div className="p-2 text-dark flex justify-between border-b-2 border-dark">
+      <div className="p-3 text-dark flex justify-between border-b-2 border-dark">
         <div className="flex">
           <img
             src="img/india.png"
             alt="India"
-            className="h-6 mr-2 rounded-md"
+            className="h-6 mr-3 rounded-md"
           />
           <h1 className="">{date}</h1>
         </div>

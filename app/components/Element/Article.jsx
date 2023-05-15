@@ -6,7 +6,7 @@ export default async function Article() {
   );
   const { articles } = await res.json();
   return (
-    <>
+    <div className="py-1.5 bg-dark">
       {articles.map((article) =>
         article.urlToImage ? (
           <ArticleCard
@@ -20,6 +20,6 @@ export default async function Article() {
           <div></div>
         )
       )}
-    </>
+    </div>
   );
 }
