@@ -1,19 +1,29 @@
 import Label from "./Label";
 
 export default async function Navbar() {
-  // const date = new Date().toDateString();
-  const date = await fetch(`http://worldtimeapi.org/api/timezone/Asia/Kolkata`);
-  const { datetime } = await date.json();
+  // Fetch date
+  const datadate = await fetch(
+    `http://worldtimeapi.org/api/timezone/Asia/Kolkata`
+  );
+  const { datetime } = await datadate.json();
+  const date = datetime.slice(8, 10);
+  const month = datetime.slice(5, 7);
 
-  const data = await fetch(
+  // Fetch temp
+  const datatemp = await fetch(
     `https://api.open-meteo.com/v1/forecast?latitude=19.076090&longitude=72.877426&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m`
   );
-  const temp = await data.json();
+  const temp = await datatemp.json();
 
   return (
-    <div>
-      <div className="flex justify-between p-3 bg-dark w-full border-b-2 border-light">
-        <div className="text-4xl text-light">
+    <div className="bg-beige text-choco">
+      <div className="flex justify-between p-3 bg-beige border-b-2 border-choco">
+        <div className="flex text-4xl text-choco">
+          <img
+            src="img/india.png"
+            alt="India"
+            className="h-10 mr-3 rounded-md"
+          />
           <a href="/">NEWS</a>
         </div>
 
@@ -22,26 +32,18 @@ export default async function Navbar() {
         </div>
 
         <div>
-          <button
-            className="text-light bg-red px-5 py-2 
-          text-center rounded-lg hover:bg-light hover:text-dark"
-          >
-            Subscribe
+          <button className="text-center rounded-md px-3 py-2 bg-red text-beige">
+            Subscribe »
           </button>
         </div>
       </div>
-      <div className="p-3 text-dark flex justify-between border-b-2 border-dark">
+      <div className="flex justify-between p-3 border-b-2 border-choco">
         <div className="flex">
-          <img
-            src="img/india.png"
-            alt="India"
-            className="h-6 mr-3 rounded-md"
-          />
-          <h1 className="">{datetime.slice(0, 10)}</h1>
+          <h1 className="">{`${date} / ${month}`}</h1>
         </div>
-        <div className="flex">
-          <img src="img/location.jpg" alt="pin" className="h-6" />
-          <h1>Mumbai {temp.current_weather.temperature.toFixed(1)}° C</h1>
+
+        <div>
+          <h1>📍 Mum {temp.current_weather.temperature.toFixed(1)}° C</h1>
         </div>
       </div>
     </div>

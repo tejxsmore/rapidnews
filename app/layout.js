@@ -1,3 +1,6 @@
+import Navbar from "./components/Element/Navbar";
+import Footer from "./components/Element/Footer";
+
 import "./globals.css";
 import { Poppins } from "next/font/google";
 
@@ -15,7 +18,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={font.className}>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

@@ -10,11 +10,9 @@ module.exports = {
   ],
   theme: {
     colors: {
-      dark: "#000000",
-      light: "#F9FBE7",
-      red: "#FF0000",
-      pink: "#CF0A0A",
-      green: "#4E9F3D",
+      beige: "#FFF3E2",
+      choco: "#321E1E",
+      red: "#E21818",
     },
     extend: {},
   },

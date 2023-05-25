@@ -1,15 +1,17 @@
-import Navbar from "./components/Element/Navbar";
-import Label from "./components/Element/Label";
-import Article from "./components/Element/Article";
-import Shorts from "./components/Element/Shorts";
-import Footer from "./components/Element/Footer";
+import Business from "./components/Articles/Business";
+import Entertainment from "./components/Articles/Entertainment";
+import Science from "./components/Articles/Science";
+import Sports from "./components/Articles/Sports";
+import Trending from "./components/Articles/Trending";
 
 export default async function Home() {
   return (
     <>
-      <Navbar />
-      <Article />
-      <Footer />
+      <Trending />
+      <Business />
+      <Sports />
+      <Science />
+      <Entertainment />
     </>
   );
 }
