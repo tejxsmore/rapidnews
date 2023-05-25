@@ -8,9 +8,9 @@ export default async function Home() {
   return (
     <>
       <Trending />
-      <Business />
       <Sports />
       <Science />
+      <Business />
       <Entertainment />
     </>
   );

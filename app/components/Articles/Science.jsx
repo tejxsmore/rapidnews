@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ScienceCard from "./ScienceCard";
 
 export default async function Science() {
@@ -12,7 +13,9 @@ export default async function Science() {
 
     return (
       <div className="bg-beige text-choco border-b-2 border-choco text-lg font-semibold p-1.5">
-        <h1 className="p-1.5 text-3xl font-bold">Science</h1>
+        <Link href="/science" className="p-1.5 text-3xl font-bold">
+          Science
+        </Link>
         <div className="sm:flex">
           {data.articles
             .slice(9, 12)

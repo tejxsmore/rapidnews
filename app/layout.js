@@ -2,13 +2,6 @@ import Navbar from "./components/Element/Navbar";
 import Footer from "./components/Element/Footer";
 
 import "./globals.css";
-import { Poppins } from "next/font/google";
-
-const font = Poppins({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const metadata = {
   title: "Rapid NEWS",
@@ -17,7 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={font.className}>
+    <html lang="en">
       <body>
         <Navbar />
         {children}

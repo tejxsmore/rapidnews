@@ -1,3 +1,4 @@
+import Link from "next/link";
 import BusinessCard from "./BusinessCard";
 
 export default async function Business() {
@@ -12,7 +13,9 @@ export default async function Business() {
 
     return (
       <div className="bg-beige text-choco border-b-2 border-choco text-lg font-semibold p-1.5">
-        <h1 className="p-1.5 text-3xl font-bold">Business</h1>
+        <Link href="/business" className="p-1.5 text-3xl font-bold">
+          Business
+        </Link>
         <div className="sm:flex">
           {data.articles
             .slice(9, 12)

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Label from "./Label";
 
 export default async function Navbar() {
@@ -8,6 +9,7 @@ export default async function Navbar() {
   const { datetime } = await datadate.json();
   const date = datetime.slice(8, 10);
   const month = datetime.slice(5, 7);
+  const year = datetime.slice(0, 4);
 
   // Fetch temp
   const datatemp = await fetch(
@@ -16,31 +18,27 @@ export default async function Navbar() {
   const temp = await datatemp.json();
 
   return (
-    <div className="bg-beige text-choco">
-      <div className="flex justify-between p-3 bg-beige border-b-2 border-choco">
-        <div className="flex text-4xl text-choco">
+    <div className="text-lg">
+      <div className="flex justify-between p-3 bg-black text-white ">
+        <Link href="/" className="flex">
           <img
             src="img/india.png"
             alt="India"
-            className="h-10 mr-3 rounded-md"
+            className="h-6 mr-3 rounded-md"
           />
-          <a href="/">NEWS</a>
-        </div>
+          <h1>NEWS</h1>
+        </Link>
 
         <div>
-          <Label />
-        </div>
-
-        <div>
-          <button className="text-center rounded-md px-3 py-2 bg-red text-beige">
-            Subscribe »
-          </button>
+          <p>Subscribe ↦</p>
         </div>
       </div>
-      <div className="flex justify-between p-3 border-b-2 border-choco">
+      <div className="flex justify-between p-3 ">
         <div className="flex">
-          <h1 className="">{`${date} / ${month}`}</h1>
+          <h1 className="">{`${date} / ${month} / ${year}`}</h1>
         </div>
+
+        <Label />
 
         <div>
           <h1>📍 Mum {temp.current_weather.temperature.toFixed(1)}° C</h1>
