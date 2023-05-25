@@ -1,7 +1,8 @@
 import Label from "./Label";
 
 export default async function Navbar() {
-  const date = new Date().toDateString();
+  // const date = new Date().toDateString();
+  const time = new Date().toLocaleTimeString();
   const data = await fetch(
     `https://api.open-meteo.com/v1/forecast?latitude=19.076090&longitude=72.877426&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m`
   );
@@ -34,7 +35,7 @@ export default async function Navbar() {
             alt="India"
             className="h-6 mr-3 rounded-md"
           />
-          <h1 className="">{date}</h1>
+          <h1 className="">{time}</h1>
         </div>
         <div className="flex">
           <img src="img/location.jpg" alt="pin" className="h-6" />
