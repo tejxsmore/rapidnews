@@ -14,7 +14,7 @@ export default async function Sports() {
     return (
       <div className="p-1.5 bg-gradient-to-br from-yellow-400 to-red-400 border-b-2 border-gray-200">
         <Link href="/sports" className="p-1.5 text-3xl font-bold">
-          Sports news
+          Sports
         </Link>
         <div className="sm:flex">
           {data.articles.slice(9, 14).map((article) => (

@@ -4,7 +4,8 @@ import ScienceCard from "./ScienceCard";
 export default async function Science() {
   try {
     const res = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=d829471bf6a544f484c80a39eef483d5`
+      `https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=d829471bf6a544f484c80a39eef483d5`,
+      { cache: "no-store" }
     );
     if (!res.ok) {
       throw new Error(`Data fetch unsuccessfull`);
@@ -12,12 +13,12 @@ export default async function Science() {
     const data = await res.json();
 
     return (
-      <div className="p-1.5 bg-white border-b-2 border-gray-200">
+      <div className="p-1.5 bg-white">
         <Link href="/sports" className="p-1.5 text-3xl font-bold">
-          Science news
+          Science
         </Link>
         <div className="sm:flex">
-          {data.articles.slice(9, 14).map((article) => (
+          {data.articles.slice(0, 4).map((article) => (
             <ScienceCard
               key={article.url}
               img={article.urlToImage}

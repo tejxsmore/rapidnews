@@ -4,7 +4,8 @@ import BusinessCard from "./BusinessCard";
 export default async function Business() {
   try {
     const res = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=d829471bf6a544f484c80a39eef483d5`
+      `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=d829471bf6a544f484c80a39eef483d5`,
+      { cache: "no-store" }
     );
     if (!res.ok) {
       throw new Error(`Data fetch unsuccessfull`);
@@ -12,13 +13,13 @@ export default async function Business() {
     const data = await res.json();
 
     return (
-      <div className="bg-beige text-choco border-b-2 border-choco text-lg font-semibold p-1.5">
+      <div className="bg-white p-1.5 sm:border-l-2 sm:border-gray-300">
         <Link href="/business" className="p-1.5 text-3xl font-bold">
           Business
         </Link>
-        <div className="sm:flex">
+        <div className="">
           {data.articles
-            .slice(9, 12)
+            .slice(0, 11)
             .map((article) =>
               article.urlToImage ? (
                 <BusinessCard
