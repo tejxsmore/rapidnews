@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { cache } from "react";
 
 export default async function Navbar() {
   // Fetch date
   const datadate = await fetch(
-    `http://worldtimeapi.org/api/timezone/Asia/Kolkata`
+    `http://worldtimeapi.org/api/timezone/Asia/Kolkata`,
+    { cache: "no-store" }
   );
   const { datetime } = await datadate.json();
   const date = datetime.slice(8, 10);
@@ -11,7 +13,8 @@ export default async function Navbar() {
 
   // Fetch temp
   const datatemp = await fetch(
-    `https://api.open-meteo.com/v1/forecast?latitude=19.076090&longitude=72.877426&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m`
+    `https://api.open-meteo.com/v1/forecast?latitude=19.076090&longitude=72.877426&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m`,
+    { cache: "no-store" }
   );
   const temp = await datatemp.json();
 
