@@ -16,7 +16,7 @@ export default async function Entertainment() {
         <Link href="/entertainment" className="p-1.5 text-3xl font-bold">
           Entertainment
         </Link>
-        <div className="sm:flex sm:flex-wrap sm:justify-between">
+        <div className="sm:flex sm:flex-wrap sm:justify-evenly  border-b-2 border-gray-300">
           {data.articles
             .slice(9, 15)
             .map((article) =>

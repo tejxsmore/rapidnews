@@ -18,7 +18,7 @@ export default async function Business() {
         </Link>
         <div className="">
           {data.articles
-            .slice(0, 11)
+            .slice(0, 10)
             .map((article) =>
               article.urlToImage ? (
                 <BusinessCard

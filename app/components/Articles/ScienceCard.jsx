@@ -8,7 +8,7 @@ export default function ScienceCard({ title, url }) {
         alt="Img"
         className="aspect-video border-2 border-white rounded-lg"
       /> */}
-      <h1 className="my-1.5">{`${title.slice(0, 70)}...`}</h1>
+      <h1 className="my-1.5 sm:text-justify">{`${title.slice(0, 80)}...`}</h1>
       <div className="py-1.5">
         <Link
           href={url}
