@@ -3,7 +3,11 @@ import Link from "next/link";
 export default function TrendingCard({ title, content, url, img }) {
   return (
     <div className="sm:max-w-lg w-full p-1.5 py-4">
-      <img src={img} alt="Img" className="aspect-video rounded-lg" />
+      <img
+        src={img}
+        alt="Img"
+        className="aspect-video rounded-lg border-2 border-yellow-300"
+      />
       <h1 className="my-1.5">{`${title.slice(0, 100)}...`}</h1>
       <div className="py-1.5">
         <Link

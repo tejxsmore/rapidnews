@@ -37,7 +37,7 @@ export default async function Navbar() {
         </div>
       </div>
 
-      <div id="right">
+      <div id="right" className="">
         <Link href="/subscribe" className="hover:underline">
           Subscribe
         </Link>

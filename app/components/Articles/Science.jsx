@@ -12,9 +12,9 @@ export default async function Science() {
     const data = await res.json();
 
     return (
-      <div className="p-1.5 bg-gradient-to-br from-yellow-400 to-red-400 border-b-2 border-gray-200">
+      <div className="p-1.5 bg-white border-b-2 border-gray-200">
         <Link href="/sports" className="p-1.5 text-3xl font-bold">
-          Sports news
+          Science news
         </Link>
         <div className="sm:flex">
           {data.articles.slice(9, 14).map((article) => (

@@ -1,4 +1,4 @@
-export default page = () => {
+export default function page() {
   return (
     <div>
       <div>
@@ -6,4 +6,4 @@ export default page = () => {
       </div>
     </div>
   );
-};
+}
