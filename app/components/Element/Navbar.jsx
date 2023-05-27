@@ -16,7 +16,7 @@ export default async function Navbar() {
   const temp = await datatemp.json();
 
   return (
-    <div className="flex justify-between p-3 bg-black text-white ">
+    <div className="flex justify-between p-3 bg-white text-black ">
       <div id="left" className="flex">
         <Link href="/" className="flex">
           <img
@@ -24,19 +24,19 @@ export default async function Navbar() {
             alt="India"
             className="h-6 mr-3 rounded-md"
           />
-          <h1 className="mr-1.5">NEWS</h1>
+          <h1 className="mr-3">NEWS</h1>
         </Link>
-        <div className="flex mx-1.5 px-2 bg-yellow-300 rounded- text-black rounded-2xl">
-          <h1 className="px-1.5">{`${date} / ${month}`}</h1>
-          <h1 className="px-1.5">
-            Mumbai {temp.current_weather.temperature.toFixed(1)}° C
+        <div className="flex px-3 bg-gradient-to-br from-yellow-400 to-red-400 rounded-2xl">
+          <h1 className="pr-3">{`${date} / ${month}`}</h1>
+          <h1 className="">
+            Mum {temp.current_weather.temperature.toFixed(1)}° C
           </h1>
         </div>
       </div>
 
       <div id="right">
-        <Link href="/subscribe" className="hover:text-yellow-300">
-          Subscribe ↦
+        <Link href="/subscribe" className="hover:underline">
+          Subscribe
         </Link>
       </div>
     </div>
