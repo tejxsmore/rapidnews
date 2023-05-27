@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <div className="flex justify-between p-1.5 bg-red text-beige">
+    <div className="flex justify-between p-1.5 text-black">
       <div className="flex">
         <Link
           href="https://linkedin.com/in/tejxsmore"

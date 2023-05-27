@@ -14,7 +14,7 @@ export default async function Trending() {
       <div className="p-1.5 bg-white border-b-2 border-gray-200">
         <h1 className="p-1.5 text-3xl font-bold">Trending news</h1>
         <div className="sm:flex">
-          {data.articles.slice(9, 12).map((article) => (
+          {data.articles.slice(5, 8).map((article) => (
             <TrendingCard
               key={article.url}
               img={article.urlToImage}

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function ScienceCard({ title, url }) {
   return (
-    <div className="p-1.5 py-3.5 sm:border-l-2 border-b-2 border-gray-300">
+    <div className="p-1.5 py-3.5 pt-3 sm:border-l-2 border-b-2 border-gray-300">
       {/* <img
         src={img}
         alt="Img"
