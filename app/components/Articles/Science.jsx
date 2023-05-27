@@ -12,26 +12,20 @@ export default async function Science() {
     const data = await res.json();
 
     return (
-      <div className="bg-beige text-choco border-b-2 border-choco text-lg font-semibold p-1.5">
-        <Link href="/science" className="p-1.5 text-3xl font-bold">
-          Science
+      <div className="p-1.5 bg-gradient-to-br from-yellow-400 to-red-400 border-b-2 border-gray-200">
+        <Link href="/sports" className="p-1.5 text-3xl font-bold">
+          Sports news
         </Link>
         <div className="sm:flex">
-          {data.articles
-            .slice(9, 12)
-            .map((article) =>
-              article.urlToImage ? (
-                <ScienceCard
-                  key={article.url}
-                  img={article.urlToImage}
-                  title={article.title}
-                  description={article.description}
-                  url={article.url}
-                />
-              ) : (
-                <div></div>
-              )
-            )}
+          {data.articles.slice(9, 14).map((article) => (
+            <ScienceCard
+              key={article.url}
+              img={article.urlToImage}
+              title={article.title}
+              description={article.description}
+              url={article.url}
+            />
+          ))}
         </div>
       </div>
     );

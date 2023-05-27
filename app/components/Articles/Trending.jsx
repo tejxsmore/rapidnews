@@ -11,24 +11,18 @@ export default async function Trending() {
     const data = await res.json();
 
     return (
-      <div className="bg-beige text-choco border-b-2 border-choco text-lg font-semibold p-1.5">
+      <div className="p-1.5 bg-white border-b-2 border-gray-200">
         <h1 className="p-1.5 text-3xl font-bold">Trending news</h1>
         <div className="sm:flex">
-          {data.articles
-            .slice(9, 12)
-            .map((article) =>
-              article.urlToImage ? (
-                <TrendingCard
-                  key={article.url}
-                  img={article.urlToImage}
-                  title={article.title}
-                  description={article.description}
-                  url={article.url}
-                />
-              ) : (
-                <div></div>
-              )
-            )}
+          {data.articles.slice(9, 12).map((article) => (
+            <TrendingCard
+              key={article.url}
+              img={article.urlToImage}
+              title={article.title}
+              description={article.description}
+              url={article.url}
+            />
+          ))}
         </div>
       </div>
     );

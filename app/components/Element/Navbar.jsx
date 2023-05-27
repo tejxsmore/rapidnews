@@ -16,7 +16,7 @@ export default async function Navbar() {
   const temp = await datatemp.json();
 
   return (
-    <div className="flex justify-between p-3 bg-white text-black ">
+    <div className="flex justify-between p-3 bg-white text-black border-b-2 border-gray-300">
       <div id="left" className="flex">
         <Link href="/" className="flex">
           <img
