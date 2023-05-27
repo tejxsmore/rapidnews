@@ -13,7 +13,7 @@ export default async function Science() {
 
     return (
       <div className="p-1.5 bg-white">
-        <Link href="/sports" className="p-1.5 text-3xl font-bold">
+        <Link href="/science" className="p-1.5 text-3xl font-bold">
           Science
         </Link>
         <div className="sm:flex">

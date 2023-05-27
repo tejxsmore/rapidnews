@@ -12,6 +12,7 @@ export default function EntertainmentCard({ title, url, img }) {
       <div className="py-1.5">
         <Link
           href={url}
+          target="_blank"
           className="px-3 py-1 bg-gradient-to-br from-yellow-400 to-red-400 rounded-md"
         >
           Read More

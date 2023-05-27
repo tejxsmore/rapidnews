@@ -10,7 +10,11 @@ export default function SportsCard({ title, url, img }) {
       />
       <h1 className="my-1.5">{`${title.slice(0, 70)}...`}</h1>
       <div className="py-1.5">
-        <Link href={url} className="px-3 py-1 bg-white rounded-md">
+        <Link
+          href={url}
+          target="_blank"
+          className="px-3 py-1 bg-white rounded-md"
+        >
           Read More
         </Link>
       </div>
