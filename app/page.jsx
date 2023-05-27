@@ -6,12 +6,12 @@ import Trending from "./components/Articles/Trending";
 
 export default async function Home() {
   return (
-    <>
+    <div className="bg-gradient-to-br from-yellow-400 to-red-400">
       <Trending />
       <Sports />
       <Science />
       <Business />
       <Entertainment />
-    </>
+    </div>
   );
 }
