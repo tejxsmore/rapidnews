@@ -6,7 +6,7 @@ export default function EntertainmentCard({ title, url, img }) {
       <img
         src={img}
         alt=""
-        className=" aspect-video rounded-md border-2 border-yellow-400"
+        className=" aspect-video rounded-md border-2 border-gray-300"
       />
       <h1 className="py-1.5">{`${title.slice(0, 70)}...`}</h1>
       <div className="py-1.5">

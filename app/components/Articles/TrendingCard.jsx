@@ -6,7 +6,7 @@ export default function TrendingCard({ title, content, url, img }) {
       <img
         src={img}
         alt="Img"
-        className="aspect-video rounded-lg border-2 border-yellow-300"
+        className="aspect-video rounded-lg border-2 border-gray-300"
       />
       <h1 className="my-1.5">{`${title.slice(0, 100)}...`}</h1>
       <div className="py-1.5">

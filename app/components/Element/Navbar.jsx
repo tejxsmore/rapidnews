@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { cache } from "react";
+import Subscribe from "./Subscribe";
 
 export default async function Navbar() {
   // Fetch date
@@ -30,7 +30,7 @@ export default async function Navbar() {
           <h1 className="mr-3">NEWS</h1>
         </Link>
         <div className="flex px-3 bg-gradient-to-br from-yellow-400 to-red-400 rounded-2xl">
-          <h1 className="pr-3">{`${date} / ${month}`}</h1>
+          <h1 className="pr-3">{`${date} / ${month} `}</h1>
           <h1 className="">
             Mum {temp.current_weather.temperature.toFixed(1)}° C
           </h1>
@@ -38,9 +38,7 @@ export default async function Navbar() {
       </div>
 
       <div id="right" className="">
-        <Link href="/subscribe" className="hover:underline">
-          Subscribe
-        </Link>
+        <Subscribe />
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import TrendingCard from "./TrendingCard";
 export default async function Trending() {
   try {
     const res = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=in&apiKey=d829471bf6a544f484c80a39eef483d5`
+      `https://newsapi.org/v2/top-headlines?country=in&apiKey=572c42439a7947dda44e89dd90d6e511`
     );
     if (!res.ok) {
       throw new Error(`Data fetch unsuccessfull`);
@@ -14,7 +14,7 @@ export default async function Trending() {
       <div className="p-1.5 bg-white">
         <h1 className="p-1.5 text-3xl font-bold">Trending news</h1>
         <div className="sm:flex">
-          {data.articles.slice(5, 8).map((article) => (
+          {data.articles.slice(0, 3).map((article) => (
             <TrendingCard
               key={article.url}
               img={article.urlToImage}

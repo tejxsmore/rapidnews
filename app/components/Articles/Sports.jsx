@@ -4,7 +4,7 @@ import SportsCard from "./SportsCard";
 export default async function Sports() {
   try {
     const res = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=d829471bf6a544f484c80a39eef483d5`
+      `https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=572c42439a7947dda44e89dd90d6e511`
     );
     if (!res.ok) {
       throw new Error(`Data fetch unsuccessfull`);
@@ -17,7 +17,7 @@ export default async function Sports() {
           Sports
         </Link>
         <div className="sm:flex">
-          {data.articles.slice(9, 14).map((article) => (
+          {data.articles.slice(0, 5).map((article) => (
             <SportsCard
               key={article.url}
               img={article.urlToImage}

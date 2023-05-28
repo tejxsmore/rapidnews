@@ -4,7 +4,7 @@ import EntertainmentCard from "./EntertainmentCard";
 export default async function Entertainment() {
   try {
     const res = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=d829471bf6a544f484c80a39eef483d5`
+      `https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=572c42439a7947dda44e89dd90d6e511`
     );
     if (!res.ok) {
       throw new Error(`Data fetch unsuccessfull`);
@@ -18,7 +18,7 @@ export default async function Entertainment() {
         </Link>
         <div className="sm:flex sm:flex-wrap sm:justify-evenly  border-b-2 border-gray-300">
           {data.articles
-            .slice(9, 15)
+            .slice(9, 16)
             .map((article) =>
               article.urlToImage ? (
                 <EntertainmentCard
