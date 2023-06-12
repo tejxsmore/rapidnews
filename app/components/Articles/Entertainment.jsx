@@ -19,7 +19,7 @@ export default async function Entertainment() {
         >
           Entertainment
         </Link>
-        <div className="sm:flex sm:flex-wrap sm:justify-between">
+        <div className="sm:flex sm:flex-wrap sm:justify-between sm:border-b-0 border-b-2 border-gray-300">
           {data.articles
             .slice(0, 6)
             .map((article) =>
