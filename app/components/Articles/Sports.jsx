@@ -4,8 +4,7 @@ import SportsCard from "./SportsCard";
 export default async function Sports() {
   try {
     const res = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=d829471bf6a544f484c80a39eef483d5`,
-      { cache: "no-store" }
+      `https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=d829471bf6a544f484c80a39eef483d5`
     );
     if (!res.ok) {
       throw new Error(`Data fetch unsuccessfull`);
