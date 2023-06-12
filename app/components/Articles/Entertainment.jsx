@@ -4,7 +4,7 @@ import EntertainmentCard from "./EntertainmentCard";
 export default async function Entertainment() {
   try {
     const res = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=572c42439a7947dda44e89dd90d6e511`,
+      `https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=d829471bf6a544f484c80a39eef483d5`,
       { cache: "no-store" }
     );
     if (!res.ok) {

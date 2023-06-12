@@ -3,7 +3,7 @@ import TrendingCard from "./TrendingCard";
 export default async function Trending() {
   try {
     const res = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=in&apiKey=572c42439a7947dda44e89dd90d6e511`,
+      `https://newsapi.org/v2/top-headlines?country=in&apiKey=d829471bf6a544f484c80a39eef483d5`,
       { cache: "no-store" }
     );
     if (!res.ok) {
