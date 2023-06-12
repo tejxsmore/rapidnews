@@ -6,14 +6,14 @@ export default function SportsCard({ title, url, img }) {
       <img
         src={img}
         alt="Img"
-        className="aspect-video border-2 border-white rounded-lg"
+        className="aspect-video border-2 border-blue-200 rounded-sm"
       />
       <h1 className="my-1.5">{`${title.slice(0, 70)}...`}</h1>
       <div className="py-1.5">
         <Link
           href={url}
           target="_blank"
-          className="px-3 py-1 bg-white rounded-md"
+          className="px-3 py-1 bg-white rounded-sm"
         >
           Read More
         </Link>

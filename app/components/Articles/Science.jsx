@@ -12,8 +12,11 @@ export default async function Science() {
     const data = await res.json();
 
     return (
-      <div className="p-1.5 bg-white">
-        <Link href="/science" className="p-1.5 text-3xl font-bold">
+      <div className="p-1.5 bg-blue-100 border-b-2 border-gray-300">
+        <Link
+          href="/science"
+          className="p-1.5 text-3xl text-gray-700 font-bold"
+        >
           Science
         </Link>
         <div className="sm:flex">

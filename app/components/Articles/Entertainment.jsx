@@ -12,13 +12,16 @@ export default async function Entertainment() {
     const data = await res.json();
 
     return (
-      <div className="p-1.5">
-        <Link href="/entertainment" className="p-1.5 text-3xl font-bold">
+      <div className="p-1.5 bg-blue-100">
+        <Link
+          href="/entertainment"
+          className="p-1.5 text-3xl text-gray-700 font-bold"
+        >
           Entertainment
         </Link>
-        <div className="sm:flex sm:flex-wrap sm:justify-evenly  border-b-2 border-gray-300">
+        <div className="sm:flex sm:flex-wrap sm:justify-between">
           {data.articles
-            .slice(9, 16)
+            .slice(0, 6)
             .map((article) =>
               article.urlToImage ? (
                 <EntertainmentCard

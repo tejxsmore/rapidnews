@@ -21,7 +21,7 @@ export default function Footer() {
         </Link>
       </div>
       <div className="mx-1.5">
-        <h1>© {year}</h1>
+        <h1>Rapid News © {year}</h1>
       </div>
     </div>
   );

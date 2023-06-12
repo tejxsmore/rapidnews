@@ -12,20 +12,26 @@ export default async function Sports() {
     const data = await res.json();
 
     return (
-      <div className="p-1.5 bg-gradient-to-br from-yellow-400 to-red-400 border-b-2 border-gray-200">
-        <Link href="/sports" className="p-1.5 text-3xl font-bold">
+      <div className="p-1.5 bg-blue-400">
+        <Link href="/sports" className="p-1.5 text-3xl text-white font-bold">
           Sports
         </Link>
         <div className="sm:flex">
-          {data.articles.slice(0, 5).map((article) => (
-            <SportsCard
-              key={article.url}
-              img={article.urlToImage}
-              title={article.title}
-              description={article.description}
-              url={article.url}
-            />
-          ))}
+          {data.articles
+            .slice(0, 5)
+            .map((article) =>
+              article.urlToImage ? (
+                <SportsCard
+                  key={article.url}
+                  img={article.urlToImage}
+                  title={article.title}
+                  description={article.description}
+                  url={article.url}
+                />
+              ) : (
+                <div></div>
+              )
+            )}
         </div>
       </div>
     );

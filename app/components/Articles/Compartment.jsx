@@ -4,7 +4,7 @@ import Entertainment from "./Entertainment";
 
 function Compartment() {
   return (
-    <div className="sm:flex">
+    <div className="sm:flex bg-blue-100">
       <div className="">
         <Science />
         <Entertainment />

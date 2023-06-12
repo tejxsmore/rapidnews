@@ -6,14 +6,14 @@ export default function TrendingCard({ title, content, url, img }) {
       <img
         src={img}
         alt="Img"
-        className="aspect-video rounded-lg border-2 border-gray-300"
+        className="aspect-video rounded-sm border-2 border-blue-200"
       />
       <h1 className="my-1.5">{`${title.slice(0, 100)}...`}</h1>
       <div className="py-1.5">
         <Link
           href={url}
           target="_blank"
-          className="px-3 py-1 bg-gradient-to-br from-yellow-400 to-red-400 rounded-md"
+          className="px-3 py-1 bg-white hover:bg-blue-400 rounded-sm"
         >
           Read More
         </Link>

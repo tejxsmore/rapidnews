@@ -2,22 +2,15 @@ import Link from "next/link";
 
 export default function EntertainmentCard({ title, url, img }) {
   return (
-    <div className="sm:max-w-xs p-1.5 py-3">
-      <img
-        src={img}
-        alt=""
-        className=" aspect-video rounded-md border-2 border-gray-300"
-      />
-      <h1 className="py-1.5">{`${title.slice(0, 70)}...`}</h1>
-      <div className="py-1.5">
-        <Link
-          href={url}
-          target="_blank"
-          className="px-3 py-1 bg-gradient-to-br from-yellow-400 to-red-400 rounded-md"
-        >
-          Read More
-        </Link>
+    <Link href={url} target="_blank">
+      <div className="sm:max-w-xs p-1.5 py-3 hover:bg-blue-200 hover:delay-100 rounded-sm">
+        <img
+          src={img}
+          alt=""
+          className=" aspect-video rounded-sm border-2 border-blue-200"
+        />
+        <h1 className="py-1.5">{`${title.slice(0, 70)}...`}</h1>
       </div>
-    </div>
+    </Link>
   );
 }

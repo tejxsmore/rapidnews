@@ -11,8 +11,10 @@ export default async function Trending() {
     const data = await res.json();
 
     return (
-      <div className="p-1.5 bg-white">
-        <h1 className="p-1.5 text-3xl font-bold">Trending news</h1>
+      <div className="p-1.5 bg-blue-100">
+        <h1 className="p-1.5 text-3xl font-bold text-gray-700">
+          Trending news
+        </h1>
         <div className="sm:flex">
           {data.articles.slice(0, 3).map((article) => (
             <TrendingCard

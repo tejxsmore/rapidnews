@@ -12,13 +12,16 @@ export default async function Business() {
     const data = await res.json();
 
     return (
-      <div className="bg-white p-1.5 sm:border-l-2 sm:border-gray-300">
-        <Link href="/business" className="p-1.5 text-3xl font-bold">
+      <div className="bg-blue-100 p-1.5 sm:border-l-2 sm:border-gray-300">
+        <Link
+          href="/business"
+          className="p-1.5 text-3xl text-gray-700 font-bold"
+        >
           Business
         </Link>
         <div className="">
           {data.articles
-            .slice(0, 11)
+            .slice(0, 8)
             .map((article) =>
               article.urlToImage ? (
                 <BusinessCard
