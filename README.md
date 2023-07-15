@@ -1,6 +1,6 @@
 # News App
 
-This app provides users with up-to-date news from various sources. Users can customize their news feed based on their interests and preferences, and can receive notifications for breaking news.
+This app provides users with up-to-date news from various sources. Users can customize their news feed based on their interests and preferences, and can receive notifications for breaking news. Styling is incomplete.
 
 ## Features
 
