@@ -11,31 +11,31 @@ export default async function Sports() {
     const data = await res.json();
 
     return (
-      <div className="flex flex-col justify-center items-center bg-blue-100">
+      <div className="flex flex-col justify-center items-center bg-violet-900 pt-3 sm:pt-10">
         {data.articles.map((article) =>
           article.urlToImage ? (
-            <div className="p-3 py-6 sm:flex border-b-2 border-gray-300">
+            <div className="bg-gray-300 rounded-sm sm:w-2/5 mx-3 sm:mx-0 mb-3 sm:mb-10 p-3 sm:p-10 font-semibold">
               <div>
                 <img
                   src={article.urlToImage}
                   alt="poster"
-                  className="aspect-video sm:w-96 mr-3 rounded-sm border-2 border-blue-300"
+                  className="mb-3 rounded-sm"
                 />
               </div>
               <div>
-                <h1 className="sm:max-w-2xl text-2xl font-bold text-gray-700 sm:text-justify pt-3 sm:pt-0 pb-3">
+                <h1 className="font-bold text-xl pb-3 text-justify">
                   {article.title}
                 </h1>
-                <p className="sm:max-w-2xl pb-6 sm:text-justify">
-                  {`${article.content}...`}
-                </p>
-                <Link
-                  href={article.url}
-                  target="_blank"
-                  className="px-2 py-1 rounded-sm bg-gradient-to-br bg-white hover:bg-blue-400 hover:text-white"
-                >
-                  Read More
-                </Link>
+                <p className="pb-5 text-justify">{`${article.content}...`}</p>
+                <div className="flex flex-col justify-center items-center">
+                  <Link
+                    href={article.url}
+                    target="_blank"
+                    className="bg-violet-900 text-gray-200 hover:text-white rounded-sm px-3 py-2"
+                  >
+                    Read More
+                  </Link>
+                </div>
               </div>
             </div>
           ) : (

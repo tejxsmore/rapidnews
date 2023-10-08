@@ -16,15 +16,21 @@ export default async function Trending() {
           Trending news
         </h1>
         <div className="sm:flex">
-          {data.articles.slice(0, 3).map((article) => (
-            <TrendingCard
-              key={article.url}
-              img={article.urlToImage}
-              title={article.title}
-              description={article.description}
-              url={article.url}
-            />
-          ))}
+          {data.articles
+            .slice(0, 4)
+            .map((article) =>
+              article.urlToImage ? (
+                <TrendingCard
+                  key={article.url}
+                  img={article.urlToImage}
+                  title={article.title}
+                  description={article.description}
+                  url={article.url}
+                />
+              ) : (
+                <div></div>
+              )
+            )}
         </div>
       </div>
     );

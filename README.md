@@ -7,7 +7,6 @@ This app provides users with up-to-date news from various sources. Users can cus
 - Customizable news feed
 - Range of categories
 - Breaking news
-- Bookmarking
 
 ## Contributing
 

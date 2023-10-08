@@ -4,18 +4,18 @@ export default function Modal({ open, onClose }) {
     return (
       <div
         onClick={onClose}
-        className="fixed top-2 right-2 h-full w-full flex justify-center items-center backdrop-blur-sm"
+        className="fixed top-0 right-0 h-full w-full sm:p-0 p-3 flex justify-center items-center backdrop-blur-md"
       >
         <div
           onClick={(e) => e.stopPropagation()}
           className="p-5 text-center bg-white text-black rounded-sm sm:max-w-lg"
         >
           <img
-            src="img/email.png"
+            src="img/mail.png"
             alt="Email icon"
-            className="ml-auto mr-auto w-12"
+            className="ml-auto mr-auto w-10"
           />
-          <h1 className="text-4xl font-bold p-3 py-6 text-gray-700">
+          <h1 className="text-4xl font-bold p-3 py-6 text-black">
             Subscribe to our Newsletter!
           </h1>
           <p>
@@ -26,7 +26,7 @@ export default function Modal({ open, onClose }) {
           <div className="flex justify-evenly">
             <button
               onClick={onClose}
-              className="bg-blue-300 my-6 px-2 py-1 rounded-sm hover:text-gray-700"
+              className="bg-violet-900 text-white mt-6 rounded-sm px-3 py-2"
             >
               Subscribe
             </button>
