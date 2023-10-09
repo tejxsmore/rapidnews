@@ -6,18 +6,18 @@ export default function Footer() {
     <div className="flex justify-between bg-gray-200 p-1.5 text-black">
       <div className="flex">
         <Link
-          href="https://linkedin.com/in/tejxsmore"
-          target="_blank"
-          className="w-7 mr-1"
-        >
-          <img src="img/linkedin.jpg" alt="LinkedIn" />
-        </Link>
-        <Link
           href="https://github.com/tejxsmore/rapidnews"
           target="_blank"
           className="w-7"
         >
-          <img src="img/github.jpg" alt="Github" />
+          <img src="img/github.png" alt="Github" />
+        </Link>
+        <Link
+          href="https://linkedin.com/in/tejxsmore"
+          target="_blank"
+          className="w-7 mr-1"
+        >
+          <img src="img/linkedin.png" alt="LinkedIn" />
         </Link>
       </div>
       <div className="mx-1.5 font-semibold">

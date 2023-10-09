@@ -2,22 +2,20 @@ import Link from "next/link";
 
 export default function SportsCard({ title, url, img }) {
   return (
-    <div className="sm:max-w-sm w-full p-1.5 py-4">
-      <img
-        src={img}
-        alt="Img"
-        className="aspect-video border-2 border-blue-200 rounded-sm"
-      />
-      <h1 className="my-1.5">{`${title.slice(0, 70)}...`}</h1>
-      <div className="py-1.5">
-        <Link
-          href={url}
-          target="_blank"
-          className="px-3 py-1 bg-white rounded-sm"
-        >
-          Read More
-        </Link>
-      </div>
+    <div>
+      <Link
+        href={url}
+        target="_blank"
+        className="bg-gray-200 text-black rounded-sm w-full max-w-sm p-3 mb-3 sm:mb-0 flex flex-col justify-center items-center"
+      >
+        <div>
+          <img src={img} alt="Img" className="aspect-video rounded-sm" />
+          <h1 className="pt-1 text-justify font-semibold">{`${title.slice(
+            0,
+            80
+          )}...`}</h1>
+        </div>
+      </Link>
     </div>
   );
 }

@@ -4,7 +4,8 @@ import ScienceCard from "./ScienceCard";
 export default async function Science() {
   try {
     const res = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=d829471bf6a544f484c80a39eef483d5`
+      `https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=d829471bf6a544f484c80a39eef483d5`,
+      { cache: "no-store" }
     );
     if (!res.ok) {
       throw new Error(`Data fetch unsuccessfull`);
@@ -12,23 +13,31 @@ export default async function Science() {
     const data = await res.json();
 
     return (
-      <div className="p-1.5 bg-blue-100 sm:border-b-2 border-gray-300">
-        <Link
-          href="/science"
-          className="p-1.5 text-3xl text-gray-700 font-bold"
-        >
-          Science
-        </Link>
-        <div className="sm:flex">
-          {data.articles.slice(0, 4).map((article) => (
-            <ScienceCard
-              key={article.url}
-              img={article.urlToImage}
-              title={article.title}
-              description={article.description}
-              url={article.url}
-            />
-          ))}
+      <div className="bg-violet-900 pt-10 flex flex-col justify-center items-center">
+        <div className="p-3">
+          <Link
+            href="/science"
+            className="font-semibold text-gray-200 text-center"
+          >
+            SCIENCE
+          </Link>
+        </div>
+        <div className="p-3 sm:gap-x-3 sm:flex">
+          {data.articles
+            .slice(7, 12)
+            .map((article) =>
+              article.urlToImage ? (
+                <ScienceCard
+                  key={article.url}
+                  img={article.urlToImage}
+                  title={article.title}
+                  description={article.description}
+                  url={article.url}
+                />
+              ) : (
+                <div></div>
+              )
+            )}
         </div>
       </div>
     );
