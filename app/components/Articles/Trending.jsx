@@ -11,13 +11,11 @@ export default async function Trending() {
     const data = await res.json();
 
     return (
-      <div className="bg-violet-900">
-        <h1 className="p-3 font-semibold text-gray-200 text-center">
-          TRENDING
-        </h1>
-        <div className="sm:flex p-3 sm:gap-x-3">
+      <div className="p-2.5">
+        <h1 className="px-2.5 py-5 font-semibold text-black">TRENDING</h1>
+        <div className="md:flex ">
           {data.articles
-            .slice(0, 3)
+            .slice(4, 8)
             .map((article) =>
               article.urlToImage ? (
                 <TrendingCard

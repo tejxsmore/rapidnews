@@ -12,18 +12,15 @@ export default async function Science() {
     const data = await res.json();
 
     return (
-      <div className="bg-violet-900 pt-10 flex flex-col justify-center items-center">
-        <div className="p-3">
-          <Link
-            href="/science"
-            className="font-semibold text-gray-200 text-center"
-          >
+      <div className="p-2.5 items-center">
+        <div className="px-2.5 py-5 font-semibold text-black">
+          <Link href="/science" className="hover:text-saffron">
             SCIENCE
           </Link>
         </div>
-        <div className="p-3 sm:gap-x-3 sm:flex">
+        <div className="md:flex">
           {data.articles
-            .slice(7, 12)
+            .slice(0, 4)
             .map((article) =>
               article.urlToImage ? (
                 <ScienceCard

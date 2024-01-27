@@ -11,7 +11,7 @@ export default async function Science() {
     const data = await res.json();
 
     return (
-      <div className="flex flex-col justify-center items-center bg-violet-900 pt-3 sm:pt-10">
+      <div className="flex flex-col justify-center items-center pt-3 sm:pt-10">
         {data.articles.map((article) =>
           article.urlToImage ? (
             <div className="bg-gray-300 rounded-sm sm:w-2/5 mx-3 sm:mx-0 mb-3 sm:mb-10 p-3 sm:p-10 font-semibold">

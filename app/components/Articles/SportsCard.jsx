@@ -6,14 +6,11 @@ export default function SportsCard({ title, url, img }) {
       <Link
         href={url}
         target="_blank"
-        className="bg-gray-200 text-black rounded-sm w-full max-w-sm p-3 mb-3 sm:mb-0 flex flex-col justify-center items-center"
+        className=" text-black rounded-md max-w-sm p-2.5 mb-5 sm:mb-0 flex flex-col justify-center items-center"
       >
         <div>
-          <img src={img} alt="Img" className="aspect-video rounded-sm" />
-          <h1 className="pt-1 text-justify font-semibold">{`${title.slice(
-            0,
-            80
-          )}...`}</h1>
+          <img src={img} alt="Img" className="aspect-video rounded-md" />
+          <h1 className="py-2.5 font-semibold">{`${title.slice(0, 80)}...`}</h1>
         </div>
       </Link>
     </div>
