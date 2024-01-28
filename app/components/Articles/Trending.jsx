@@ -11,7 +11,7 @@ export default async function Trending() {
     const data = await res.json();
 
     return (
-      <div className="p-2.5">
+      <div id="trending" className="p-2.5 border-b-[1px] border-gray-700">
         <h1 className="px-2.5 py-5 font-semibold text-black">TRENDING</h1>
         <div className="md:flex ">
           {data.articles
@@ -22,6 +22,7 @@ export default async function Trending() {
                   key={article.url}
                   img={article.urlToImage}
                   title={article.title}
+                  description={article.description}
                   url={article.url}
                 />
               ) : (

@@ -12,7 +12,7 @@ export default async function Entertainment() {
     const data = await res.json();
 
     return (
-      <div className="p-2.5 items-center">
+      <div className="p-2.5 items-center border-b-[1px] border-gray-700">
         <div className="px-2.5 py-5 font-semibold text-black">
           <Link href="/entertainment" className="hover:text-saffron">
             ENTERTAINMENT

@@ -19,7 +19,7 @@ export default async function Navbar() {
   const temp = await datatemp.json();
 
   return (
-    <div className="flex justify-between items-center p-5 text-black">
+    <div className="flex justify-between items-center p-5 text-black ">
       <div id="left" className="flex items-center">
         <Link href="/" className="flex items-center">
           <img
